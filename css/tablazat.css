@@ -21,10 +21,15 @@ table tr td:nth-child(9){
 
 /* Fejléc sötét háttér */
 table tr:nth-child(1){
-    background-color: rgba(0,0,0, .4);
+    background-color: rgba(0,0,0,.4);
 }
 
 /* Táblázat minden második sorának színezése */
 table tr:nth-child(even){
     background-color: rgba(0,0,0,.2);
+}
+
+table tr:not(:first-child):hover td {
+    background-color: rgba(255,0,0,.8);
+    color: white;
 }
