@@ -1,17 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-body{
-    background-color: rgba(0,0,0,.1);
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+* {
+    box-sizing: border-box;
 }
 
-ul{
+body {
+    background: rgba(0,0,0,.4) fixed;
+    margin: 0;
+    font: 20px/27px "Oswald", sans-serif;
+}
+
+.tartalom {
+    max-width: 1000px;
+    width: 90%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 5px 20px;
+}
+
+ul {
     list-style-type: none;
 }
 
-a{
+a {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 5px 10px;
     text-decoration: none;
     color: black;
+}
+
+a:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,.4);
+}
+
+
+
+.tartalom .vissza a {
+
+    background: rgba(255, 153, 0, 1);
+}
+
+.tartalom .vissza a:hover {
+    background: rgba(255, 110, 0, 1);
 }
