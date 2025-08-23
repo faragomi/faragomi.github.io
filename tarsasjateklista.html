@@ -13,5 +13,21 @@
 
         <p class="vissza"><a href="index.html">Vissza a főoldalra</a></p>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script>
+        console.log("PapaParse betöltve:", typeof Papa !== "undefined");
+    </script>
+
+    <script>
+        Papa.parse("adat/tarsasLista.csv",{
+            download: true,
+            header:true,
+            complete: function(results){
+                console.log("Beolvasott adatok:", results.data);
+            }
+        });
+    </script>
+
 </body>
 </html>
