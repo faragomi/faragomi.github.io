@@ -21,7 +21,7 @@ table tr td:nth-child(9){
 
 /* Fejléc sötét háttér */
 table tr:nth-child(1){
-    background-color: rgba(0,0,0.4);
+    background-color: rgba(0,0,0, .4);
 }
 
 /* Táblázat minden második sorának színezése */
