@@ -20,9 +20,13 @@ table tr td:nth-child(9){
 }
 
 /* Kiadás éve, Kiadó, megjegyzés, Szerző mezők rejtése */
+table tr th:nth-child(10),
 table tr td:nth-child(10),
+table tr th:nth-child(11),
 table tr td:nth-child(11),
+table tr th:nth-child(12),
 table tr td:nth-child(12),
+table tr th:nth-child(13),
 table tr td:nth-child(13){
     display: none;
 }
