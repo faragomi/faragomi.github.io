@@ -52,7 +52,21 @@ Papa.parse("adat/tarsasListaKozos.csv",{
 
 });
 
-
+const fejlecMap = {
+    tarsasjatekNev : "Játék neve",
+    tarsasjatekID : "Társasjáték ID",
+    alapjatekNev: "Alapjáték neve",
+    alapjatekID: "Alapjáték ID",
+    jatekNyelv: "játék nyelve",
+    nyelvfuggetlen: "Nyelvfüggetlen?",
+    magyarJatekszabaly: "Magyar játékszabály elérhető?",
+    minJatekos: "Minimális játékosszám",
+    maxJatekos: "Maximális játékosszám",
+    kiadasEv: "Kiadás éve",
+    kiado: "Kiadó",
+    megjegyzes: "Megjegyzés",
+    szerzo: "Szerző"
+};
 
 /***** Tábla rajzolása *****/
 
