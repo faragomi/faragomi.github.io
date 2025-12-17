@@ -31,11 +31,12 @@ Papa.parse("adat/tarsasLista.csv",{
     complete: function(results){
         mindenJatekListaSajat = results.data;
         szurtJatekListaSajat = mindenJatekListaSajat;
-        renderTable(szurtJatekListaSajat);
+        renderTable(szurtJatekListaSajat,"tarsasLista");
     }
 
+    //console.log("Saját lista betöltve:", mindenJatekListaSajat.length);
+    
 });
-
 
 /***** Közös lista, második táblázat *****/
 Papa.parse("adat/tarsasListaKozos.csv",{
@@ -44,72 +45,43 @@ Papa.parse("adat/tarsasListaKozos.csv",{
     complete: function(results){
         mindenJatekListaKozos = results.data;
         szurtJatekListaKozos = mindenJatekListaKozos;
-        renderTable(szurtJatekListaKozos);
+        renderTable(szurtJatekListaKozos,"tarsasListaKozos");
     }
+    
+    //console.log("Közös lista betöltve:", mindenJatekListaKozos.length);
 
 });
 
 
-/* A fapados táblázat kiírása az oldalra */
-/*
-Papa.parse("adat/tarsasLista.csv",{
-    download: true,
-    header: true,
-    complete: function(results){
-        const adat = results.data;
-        const table = document.getElementById("tarsasjatekLista-1");
-    
-    // fejlés létrehozása
-    const headerRow = document.createElement('tr');
-    Object.keys(adat[0]).forEach(key => {
+
+/***** Tábla rajzolása *****/
+
+function renderTable(jatekLista, tablaID){
+    const tabla = document.getElementById(tablaID);
+    tabla.innerHTML = "";
+
+    if(!jatekLista.length){
+        return;
+    }
+
+    // fejléc létrehozása
+    const fejlecSor = document.createElement("tr");
+    Object.keys(adatLista[0]).forEach(key => {
         const th = document.createElement("th");
-        th.textContent = key;
-        headerRow.appendChild(th);
+        th.textContent = fejlecMap[key] ?? key;
+        th.dataset.column = key;
+        fejlecSor.appendChild(th);
     });
-    table.appendChild(headerRow);
+    tabla.appendChild(fejlecSor);
 
     // adatsorok létrehozása
-    adat.forEach(row => {
+    jatekLista.forEach( sor => {
         const tr = document.createElement("tr");
-        Object.values(row).forEach(value => {
+        Object.values(sor).forEach(ertek => {
             const td = document.createElement("td");
-            td.textContent = value;
+            td.textContent = ertek;
             tr.appendChild(td);
         });
-        table.appendChild(tr);
+        tabla.appendChild(tr);
     });
-    }
-});
-
-
-
-Papa.parse("adat/tarsasListaKozos.csv",{
-    download: true,
-    header: true,
-    complete: function(results){
-        const adat = results.data;
-        const table = document.getElementById("tarsasjatekLista-2");
-    
-    // fejlés létrehozása
-    const headerRow = document.createElement('tr');
-    Object.keys(adat[0]).forEach(key => {
-        const th = document.createElement("th");
-        th.textContent = key;
-        headerRow.appendChild(th);
-    });
-    table.appendChild(headerRow);
-
-    // adatsorok létrehozása
-    adat.forEach(row => {
-        const tr = document.createElement("tr");
-        Object.values(row).forEach(value => {
-            const td = document.createElement("td");
-            td.textContent = value;
-            tr.appendChild(td);
-        });
-        table.appendChild(tr);
-    });
-    }
-});
-
-*/
+}
