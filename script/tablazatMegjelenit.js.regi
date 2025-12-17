@@ -1,4 +1,3 @@
-
 /* PapaParse meglétének ellenőrzése */
 // console.log("PapaParse betöltve:", typeof Papa !== "undefined");
 
@@ -14,44 +13,7 @@ Papa.parse("adat/tarsasLista.csv",{
 */
 
 
-/* Adatok tárolására létrehozott változók */
-/***** Első táblázat *****/
-let mindenJatekListaSajat = [];  // teljes csv tartalma
-let szurtJatekListaSajat = [];   // aktuálisan szűrt lista
-
-/***  Második táblázat ***/
-let mindenJatekListaKozos = [];  // teljes csv tartalma
-let szurtJatekListaKozos = [];   // aktuálisan szűrt lista
-
-
-/***** Saját lista, első táblázat *****/
-Papa.parse("adat/tarsasLista.csv",{
-    download: true,
-    header: true,
-    complete: function(results){
-        mindenJatekListaSajat = results.data;
-        szurtJatekListaSajat = mindenJatekListaSajat;
-        renderTable(szurtJatekListaSajat);
-    }
-
-});
-
-
-/***** Közös lista, második táblázat *****/
-Papa.parse("adat/tarsasListaKozos.csv",{
-    download: true,
-    header: true,
-    complete: function(results){
-        mindenJatekListaKozos = results.data;
-        szurtJatekListaKozos = mindenJatekListaKozos;
-        renderTable(szurtJatekListaKozos);
-    }
-
-});
-
-
 /* A fapados táblázat kiírása az oldalra */
-/*
 Papa.parse("adat/tarsasLista.csv",{
     download: true,
     header: true,
@@ -82,7 +44,6 @@ Papa.parse("adat/tarsasLista.csv",{
 });
 
 
-
 Papa.parse("adat/tarsasListaKozos.csv",{
     download: true,
     header: true,
@@ -111,5 +72,3 @@ Papa.parse("adat/tarsasListaKozos.csv",{
     });
     }
 });
-
-*/
