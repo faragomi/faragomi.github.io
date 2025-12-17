@@ -66,7 +66,7 @@ function renderTable(jatekLista, tablaID){
 
     // fejléc létrehozása
     const fejlecSor = document.createElement("tr");
-    Object.keys(adatLista[0]).forEach(key => {
+    Object.keys(jatekLista[0]).forEach(key => {
         const th = document.createElement("th");
         th.textContent = fejlecMap[key] ?? key;
         th.dataset.column = key;
