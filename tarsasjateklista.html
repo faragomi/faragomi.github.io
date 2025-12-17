@@ -11,12 +11,42 @@
 <body>
     <div class="tartalom">
         <h1>Társasjáték lista 1.</h1>
-        <label for="tarsasNev">Társasjáték neve:</label>
-        <label for="jatekNyelve">A játék nyelve:</label>
-        <label for="nyelvFuggetlen">Nyelvfüggetlen:</label>
-        <label for="magyarSzabaly">Magyar játékszabály van:</label>
-        <label for="minimalisJatekosszam">Játékosszám alsó:</label>
-        <label for="maximalisJatekosSzam">Játékosszám felső:</label>
+        <div>
+            <label for="tarsasNev">Társasjáték neve:</label>
+            <input type="text" id="tarsasNev" onchange="">            
+        </div>
+        <div>
+            <span>A játék nyelve:</span>
+            <select name="jatekNyelve" id="jatekNyelve" onchange="">
+                <option value="magyar">magyar</option>
+                <option value="angol">angol</option>
+                <option value="német">német</option>
+                <option value="egyéb">egyéb</option>
+            </select> 
+        </div>
+        <div>
+            <span>Nyelvfüggetlen:</span>
+            <label for="magyar">igen</label>
+            <input type="radio" name="nyelvfuggetlen" id="igen" value="igen" onchange="">
+            <label for="angol">nem</label>
+            <input type="radio" name="nyelvfuggetlen" id="nem" value="nem" onchange="">
+        </div>
+        <div>
+            <span>Magyar játékszabály elérhető:</span>
+            <label for="magyar">igen</label>
+            <input type="radio" name="magyarSzabaly" id="igen" value="igen" onchange="">
+            <label for="angol">nem</label>
+            <input type="radio" name="magyarSzabaly" id="nem" value="nem" onchange="">
+        </div>
+        <div>
+            <label for="minimalisJatekosszam">Minimális játékosszám:</label>
+            <input type="number" name="minimalisJatekosszam" id="minimalisJatekosszam" onchange="">
+        </div>
+        <div>
+            <label for="maximalisJatekosSzam">Maximális játékosszám:</label>
+            <input type="number" name="maximalisJatekosSzam" id="maximalisJatekosSzam" onchange="">
+        </div>
+
         <table id="tarsasjatekLista-1"></table>
         
         <h1>Társasjáték lista 2.</h1>
