@@ -32,11 +32,11 @@ Papa.parse("adat/tarsasLista.csv",{
         mindenJatekListaSajat = results.data;
         szurtJatekListaSajat = mindenJatekListaSajat;
         renderTable(szurtJatekListaSajat,"tarsasLista");
+        console.log("Saját lista betöltve:", mindenJatekListaSajat.length);
     }
-
-    //console.log("Saját lista betöltve:", mindenJatekListaSajat.length);
     
 });
+
 
 /***** Közös lista, második táblázat *****/
 Papa.parse("adat/tarsasListaKozos.csv",{
@@ -46,11 +46,12 @@ Papa.parse("adat/tarsasListaKozos.csv",{
         mindenJatekListaKozos = results.data;
         szurtJatekListaKozos = mindenJatekListaKozos;
         renderTable(szurtJatekListaKozos,"tarsasListaKozos");
+        console.log("Közös lista betöltve", mindenJatekListaKozos.length);
     }
     
-    //console.log("Közös lista betöltve:", mindenJatekListaKozos.length);
-
+    
 });
+
 
 const fejlecMap = {
     tarsasjatekNev : "Játék neve",
@@ -98,4 +99,16 @@ function renderTable(jatekLista, tablaID){
         });
         tabla.appendChild(tr);
     });
+}
+
+document.getElementById("jatekNevSzuro").addEventListener("input",szur);
+function szur(){
+    const keresettSzoveg = this.value.toLowerCase();
+    
+    szurtJatekListaSajat = mindenJatekListaSajat.filter(jatek =>
+        jatek.tarsasjatekNev &&
+        jatek.tarsasjatekNev.toLowerCase().includes(keresettSzoveg)
+    );
+
+    renderTable(szurtJatekListaSajat, "tarsasLista");
 }
