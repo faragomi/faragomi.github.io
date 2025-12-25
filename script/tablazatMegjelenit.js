@@ -117,11 +117,11 @@ function szur(){
 */
 
 function szur2(){
-    const keresettSzoveg = this.value;
+    const keresettSzoveg = Numeric(this.value);
     
     szurtJatekListaSajat = mindenJatekListaSajat.filter(jatek =>
         jatek.minimalisJatekosszamSzuro &&
-        jatek.minimalisJatekosszamSzuro >= keresettSzoveg
+        Number(jatek.minimalisJatekosszamSzuro) >= keresettSzoveg
     );
 
     renderTable(szurtJatekListaSajat, "tarsasLista");
