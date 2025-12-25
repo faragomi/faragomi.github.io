@@ -101,14 +101,27 @@ function renderTable(jatekLista, tablaID){
     });
 }
 
-document.getElementById("tarsasNevSzuro").addEventListener("input", szur);
-
+//document.getElementById("tarsasNevSzuro").addEventListener("input", szur);
+document.getElementById("minimalisJatekosszamSzuro").addEventListener("input", szur2);
+/*
 function szur(){
     const keresettSzoveg = this.value.toLowerCase();
     
     szurtJatekListaSajat = mindenJatekListaSajat.filter(jatek =>
         jatek.tarsasjatekNev &&
         jatek.tarsasjatekNev.toLowerCase().includes(keresettSzoveg)
+    );
+
+    renderTable(szurtJatekListaSajat, "tarsasLista");
+}
+*/
+
+function szur2(){
+    const keresettSzoveg = this.value.toLowerCase();
+    
+    szurtJatekListaSajat = mindenJatekListaSajat.filter(jatek =>
+        jatek.minimalisJatekosszamSzuro &&
+        jatek.minimalisJatekosszamSzuro.toLowerCase() >= keresettSzoveg
     );
 
     renderTable(szurtJatekListaSajat, "tarsasLista");
