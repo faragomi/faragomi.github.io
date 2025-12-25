@@ -127,7 +127,7 @@ function szur2(){
 
     szurtJatekListaSajat = mindenJatekListaSajat.filter(jatek =>
         jatek.minimalisJatekosszamSzuro &&
-        Number(jatek.minimalisJatekosszamSzuro) >= keresettSzoveg
+        Number(jatek.minimalisJatekosszamSzuro) <= keresettSzoveg
     );
 
     renderTable(szurtJatekListaSajat, "tarsasLista");
