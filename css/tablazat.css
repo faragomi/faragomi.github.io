@@ -1,3 +1,7 @@
+:root {
+    --fejlec-szama: 1;
+}
+
 table {
     font-weight: 300;
 }
@@ -32,7 +36,7 @@ table tr td:nth-child(13){
 }
 
 /* Fejléc sötét háttér */
-table tr:nth-child(1){
+table tr:nth-child(var(--fejlec-szama)){
     background-color: rgba(0,0,0,.4);
 }
 
