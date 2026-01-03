@@ -101,6 +101,7 @@ function renderTable(jatekLista, tablaID){
     });
 }
 
+document.getElementById("tarsasNevSzuro").addEventListener("input", szur);
 
 function szur(){
     const keresettSzoveg = this.value.toLowerCase();
