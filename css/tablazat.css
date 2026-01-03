@@ -1,30 +1,13 @@
-:root {
-    --oszlop-tarsasjatek-nev: 1;
-    --oszlop-tarsasjatek-ID:  2;
-    --oszlop-tarsasjatek-alapjatek: 3;
-    --oszlop-tarsasjatek-alapjatekNev: 4;
-    --oszlop-tarsasjatek-alapjatekID: 5;
-    --oszlop-tarsasjatek-jatekNyelv: 6;
-    --oszlop-tarsasjatek-nyelvfuggetlen: 7;
-    --oszlop-tarsasjatek-magyarJatekszabaly: 8;
-    --oszlop-tarsasjatek-minJatekos: 9;
-    --oszlop-tarsasjatek-maxJatekos: 10;
-    --oszlop-tarsasjatek-kiadasEv: 11;
-    --oszlop-tarsasjatek-kiado: 12;
-    --oszlop-tarsasjatek-megjegyzes: 13;
-    --oszlop-tarsasjatek-szerzo: 14;
-}
-
 table {
     font-weight: 300;
 }
 
 
 /* ID mezők rejtése */
-table tr th:nth-child(var(--oszlop-tarsasjatek-alapjatekID)),
-table tr td:nth-child(var(--oszlop-tarsasjatek-alapjatekID)),
-table tr th:nth-child(var(--oszlop-tarsasjatek-ID)),
-table tr td:nth-child(var(--oszlop-tarsasjatek-ID)){
+table tr th:nth-child(2),
+table tr td:nth-child(2),
+table tr th:nth-child(4),
+table tr td:nth-child(4){
     display: none;
 }
 
