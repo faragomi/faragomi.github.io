@@ -1,4 +1,3 @@
-Társasjáték neve;Társasjáték ID;Alapjáték?;Az alapjáték, ha kiegészítő lenne;Az alapjáték iD-ja;A Játék nyelve;A játék nyelvüggetlen;Van hozzá magyar szabály;Minimális játékosszám;Maximális játékosszám;Kiadás éve;Kiadó;Megjegyzés;Szerző
 tarsasjatekNev;tarsasjatekID;alapjatek;alapjatekNev;alapjatekID;jatekNyelv;nyelvfuggetlen;magyarJatekszabaly;minJatekos;maxJatekos;kiadasEv;kiado;megjegyzes;szerzo
 Catan telepesei;001;igen;;;magyar;igen;igen;3;4;;;;
 Star Wars: Kígyók és létrák;002;igen;;;magyar;igen;igen;2;4;;;;
