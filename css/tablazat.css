@@ -34,32 +34,32 @@ table tr td:nth-child(10){
     text-align: center;
 }
 
-.tarsasLista tr th:nth-child(2),
-.tarsasLista tr th:nth-child(5),
-.tarsasLista tr th:nth-child(11),
-.tarsasLista tr th:nth-child(12),
-.tarsasLista tr th:nth-child(13),
-.tarsasLista tr th:nth-child(14),
-.tarsasLista tr td:nth-child(2),
-.tarsasLista tr td:nth-child(5),
-.tarsasLista tr td:nth-child(11),
-.tarsasLista tr td:nth-child(12),
-.tarsasLista tr td:nth-child(13),
-.tarsasLista tr td:nth-child(14){
+.tarsasListaTablazat tr th:nth-child(2),
+.tarsasListaTablazat tr th:nth-child(5),
+.tarsasListaTablazat tr th:nth-child(11),
+.tarsasListaTablazat tr th:nth-child(12),
+.tarsasListaTablazat tr th:nth-child(13),
+.tarsasListaTablazat tr th:nth-child(14),
+.tarsasListaTablazat tr td:nth-child(2),
+.tarsasListaTablazat tr td:nth-child(5),
+.tarsasListaTablazat tr td:nth-child(11),
+.tarsasListaTablazat tr td:nth-child(12),
+.tarsasListaTablazat tr td:nth-child(13),
+.tarsasListaTablazat tr td:nth-child(14){
     display: none;
 }
 
 /* Fejléc sötét háttér */
-#tarsasLista tr:nth-child(1){
+.tarsasListaTablazat tr:nth-child(1) {
     background-color: rgba(0,0,0,.4);
 }
 
 /* Táblázat minden második sorának színezése */
-#tarsasLista tr:nth-child(even){
+.tarsasListaTablazat tr:nth-child(even) {
     background-color: rgba(0,0,0,.2);
 }
 
-#tarsasLista tr:not(:first-child):hover td {
+.tarsasListaTablazat tr:not(:first-child):hover td {
     background-color: rgba(255,0,0,.8);
     color: white;
 }
