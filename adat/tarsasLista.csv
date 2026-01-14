@@ -1,4 +1,3 @@
-Társasjáték neve;Társasjáték ID;Alapjáték?;Az alapjáték, ha kiegészítő lenne;Az alapjáték iD-ja;A Játék nyelve;A játék nyelvüggetlen;Van hozzá magyar szabály;Minimális játékosszám;Maximális játékosszám;Kiadás éve;Kiadó;Megjegyzés;Szerző
 tarsasjatekNev;tarsasjatekID;alapjatek;alapjatekNev;alapjatekID;jatekNyelv;nyelvfuggetlen;magyarJatekszabaly;minJatekos;maxJatekos;kiadasEv;kiado;megjegyzes;szerzo
 A Feast for Odin;001;igen;;;angol;nem;igen;1;4;;;;Uwe Rosenberg
 A Feast for Odin: The Norwegians;002;nem;A Feast for Odin;001;angol;nem;igen;1;4;;;;
