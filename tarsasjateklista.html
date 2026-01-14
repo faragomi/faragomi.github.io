@@ -10,43 +10,119 @@
 </head>
 <body>
     <div class="tartalom">
-        <h1>Társasjáték lista 1.</h1>
-        <div>
-            <label for="tarsasNevSzuro">Társasjáték neve:</label>
-            <input type="text" id="tarsasNevSzuro">            
-        </div>
-        <div>
-            <span>A játék nyelve:</span>
-            <select name="jatekNyelveSzuro" id="jatekNyelveSzuro">
-                <option value="magyar">magyar</option>
-                <option value="angol">angol</option>
-                <option value="német">német</option>
-                <option value="egyéb">egyéb</option>
-            </select> 
-        </div>
-        <div>
-            <span>Nyelvfüggetlen:</span>
-            <label for="nyelvfuggetlenSzuroIgen">igen</label>
-            <input type="radio" name="nyelvfuggetlenSzuro" id="nyelvfuggetlenSzuroIgen" value="igen">
-            <label for="nyelvfuggetlenSzuroNem">nem</label>
-            <input type="radio" name="nyelvfuggetlenSzuro" id="nyelvfuggetlenSzuroNem" value="nem">
-        </div>
-        <div>
-            <span>Magyar játékszabály elérhető:</span>
-            <label for="magyarSzabalySzuroIgen">igen</label>
-            <input type="radio" name="magyarSzabalySzuro" id="magyarSzabalySzuroIgen" value="igen">
-            <label for="magyarSzabalySzuroNem">nem</label>
-            <input type="radio" name="magyarSzabalySzuro" id="magyarSzabalySzuroNem" value="nem">
-        </div>
-        <div>
-            <label for="minimalisJatekosszamSzuro">Minimális játékosszám:</label>
-            <input type="number" name="minimalisJatekosszamSzuro" id="minimalisJatekosszamSzuro">
-        </div>
-        <div>
-            <label for="maximalisJatekosSzamSzuro">Maximális játékosszám:</label>
-            <input type="number" name="maximalisJatekosSzamSzuro" id="maximalisJatekosSzamSzuro">
-        </div>
 
+        <div class="hasab">
+            <div class="hasab-1">
+                
+                <div>
+                    <label for="tarsasNevSzuro">Játék keresése név alapján:</label>
+                    <input type="text" id="tarsasNevSzuro">            
+                </div>
+                
+                <button id="jatekListaSzuro-gomb" class="jatekListaSzuro-gomb">Játékok keresése szűrők segítségével</button>
+                <div id="szuro" class="szuro">
+                    <div>
+                        <span>A játék nyelve:</span>
+                        <select name="jatekNyelveSzuro" id="jatekNyelveSzuro">
+                            <option value="magyar">magyar</option>
+                            <option value="angol">angol</option>
+                            <option value="német">német</option>
+                            <option value="egyéb">egyéb</option>
+                        </select> 
+                    </div>
+                    
+                    <div>
+                        <span>Nyelvfüggetlen:</span>
+                        <label for="nyelvfuggetlenSzuroIgen">igen</label>
+                        <input type="radio" name="nyelvfuggetlenSzuro" id="nyelvfuggetlenSzuroIgen" value="igen">
+                        <label for="nyelvfuggetlenSzuroNem">nem</label>
+                        <input type="radio" name="nyelvfuggetlenSzuro" id="nyelvfuggetlenSzuroNem" value="nem">
+                    </div>
+                    
+                    <div>
+                        <span>Magyar játékszabály elérhető:</span>
+                        <label for="magyarSzabalySzuroIgen">igen</label>
+                        <input type="radio" name="magyarSzabalySzuro" id="magyarSzabalySzuroIgen" value="igen">
+                        <label for="magyarSzabalySzuroNem">nem</label>
+                        <input type="radio" name="magyarSzabalySzuro" id="magyarSzabalySzuroNem" value="nem">
+                    </div>
+                    
+                    <div>
+                        <label for="minimalisJatekosszamSzuro">Minimális játékosszám:</label>
+                        <input type="number" name="minimalisJatekosszamSzuro" id="minimalisJatekosszamSzuro">
+                    </div>
+                    
+                    <div>
+                        <label for="maximalisJatekosSzamSzuro">Maximális játékosszám:</label>
+                        <input type="number" name="maximalisJatekosSzamSzuro" id="maximalisJatekosSzamSzuro">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="hasab-2">
+                <button id="lathatoOszlopok-gomb" class="lathatoOszlopok-gomb">Látható oszlopok kiválasztása</button>
+                <table id="lathatoOszlopok-tabla" class="lathatoOszlopok-tabla">
+                    <tr>
+                        <th>Oszlop neve</th>
+                        <th>Rejtett</th>
+                    </tr>
+                    <tr>
+                        <td><label for="tarsasjatekID-oszlopLathatosag">Társasjáték ID:</label></td>
+                        <td><input type="checkbox" name="tarsasjatekID-oszlopLathatosag" id="tarsasjatekID-oszlopLathatosag" value="2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="alapjatek-oszlopLathatosag">Alapjáték:</label></td>
+                        <td><input type="checkbox" name="alapjatek-oszlopLathatosag" id="alapjatek-oszlopLathatosag" value="3"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="alapjatekNev-oszlopLathatosag">Az alapjáték neve:</label></td>
+                        <td><input type="checkbox" name="alapjatekNev-oszlopLathatosag" id="alapjatekNev-oszlopLathatosag" value="4" checked></td>
+                    </tr>
+                    <tr>
+                        <td><label for="alapjatekID-oszlopLathatosag">Alapjáték ID:</label></td>
+                        <td><input type="checkbox" name="alapjatekID-oszlopLathatosag" id="alapjatekID-oszlopLathatosag" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="jatekNyelve-oszlopLathatosag">A játék nyelve:</label></td>
+                        <td><input type="checkbox" name="jatekNyelve-oszlopLathatosag" id="jatekNyelve-oszlopLathatosag" value="6" checked></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nyelvfuggetlen-oszlopLathatosag">Nyelvfüggetlen:</label></td>
+                        <td><input type="checkbox" name="nyelvfuggetlen-oszlopLathatosag" id="nyelvfuggetlen-oszlopLathatosag" value="7" checked></td>
+                    </tr>
+                    <tr>
+                        <td><label for="magyarJatekszabaly-oszlopLathatosag">Van hozzá magyar játékszabály:</label></td>
+                        <td><input type="checkbox" name="magyarJatekszabaly-oszlopLathatosag" id="magyarJatekszabaly-oszlopLathatosag" value="8" checked></td>
+                    </tr>
+                    <tr>
+                        <td><label for="minJatekos-oszlopLathatosag">Minimális játékosszám:</label></td>
+                        <td><input type="checkbox" name="minJatekos-oszlopLathatosag" id="minJatekos-oszlopLathatosag" value="9" checked></td>
+                    </tr>
+                    <tr>
+                        <td><label for="maxJatekos-oszlopLathatosag">Maximális játékosszám:</label></td>
+                        <td><input type="checkbox" name="maxJatekos-oszlopLathatosag" id="maxJatekos-oszlopLathatosag" value="10" checked></td>
+                    </tr>
+                    <tr>
+                        <td><label for="kiadasEv-oszlopLathatosag">Kiadás éve:</label></td>
+                        <td><input type="checkbox" name="kiadasEv-oszlopLathatosag" id="kiadasEv-oszlopLathatosag" value="11"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="kiado-oszlopLathatosag">Kiadó:</label></td>
+                        <td><input type="checkbox" name="kiado-oszlopLathatosag" id="kiado-oszlopLathatosag" value="12"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="megjegyzes-oszlopLathatosag">Megjegyzés:</label></td>
+                        <td><input type="checkbox" name="megjegyzes-oszlopLathatosag" id="megjegyzes-oszlopLathatosag" value="13"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="szerzo-oszlopLathatosag">Szerző:</label></td>
+                        <td><input type="checkbox" name="szerzo-oszlopLathatosag" id="szerzo-oszlopLathatosag" value="14"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <h1>Társasjáték lista 1.</h1>
         <table id="tarsasLista"></table>
         
         <h1>Társasjáték lista 2.</h1>
@@ -57,6 +133,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
+    <script src="script/oszlopElrejt.js"></script>
     <script src="script/tablazatMegjelenit.js"></script>
 
 </body>

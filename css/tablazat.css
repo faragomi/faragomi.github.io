@@ -1,14 +1,26 @@
+/********************************************************************************
+A táblázat oszlopai 2026.01.04-én
+
+01 - Társasjáték név,                           tarsasjatekNev,     szöveg
+02 - Társasjáték ID,                            tarsasjatekID,      szám
+03 - Alapjáték?,                                alapjatek,          igen/nem       
+04 - Az alapjáték neve, ha kiegészítő lenne,    alapjatekNev,       szöveg
+05 - Alapjáték ID,                              alapjatekID,        szám
+06 - A játék nyelve,                            jatekNyelv,         szöveg
+07 - A játék nyelvfüggetlen?,                   nyelvfuggetlen,     igen/nem
+08 - Van hozzó magyar szabály?,                 magyarJatekszabaly, igen/nem
+09 - Minimális játékosszám,                     minJatekos,         szám
+10 - Maximális játékosszám,                     maxJatekos,         szám
+11 - Kiadás éve,                                kiadasEv,           szám
+12 - Kiadó,                                     kiado,              szöveg
+13 - Megjegyzes,                                megjegyzes,         szöveg
+14 - Szerző,                                    szerzo,             szöveg
+
+********************************************************************************/
+
+
 table {
     font-weight: 300;
-}
-
-
-/* ID mezők rejtése */
-table tr th:nth-child(2),
-table tr td:nth-child(2),
-table tr th:nth-child(4),
-table tr td:nth-child(4){
-    display: none;
 }
 
 table tr td:nth-child(5),
@@ -19,29 +31,17 @@ table tr td:nth-child(9){
     text-align: center;
 }
 
-/* Kiadás éve, Kiadó, megjegyzés, Szerző mezők rejtése */
-table tr th:nth-child(10),
-table tr td:nth-child(10),
-table tr th:nth-child(11),
-table tr td:nth-child(11),
-table tr th:nth-child(12),
-table tr td:nth-child(12),
-table tr th:nth-child(13),
-table tr td:nth-child(13){
-    display: none;
-}
-
 /* Fejléc sötét háttér */
-table tr:nth-child(1){
+#tarsasLista tr:nth-child(1){
     background-color: rgba(0,0,0,.4);
 }
 
 /* Táblázat minden második sorának színezése */
-table tr:nth-child(even){
+#tarsasLista tr:nth-child(even){
     background-color: rgba(0,0,0,.2);
 }
 
-table tr:not(:first-child):hover td {
+#tarsasLista tr:not(:first-child):hover td {
     background-color: rgba(255,0,0,.8);
     color: white;
 }
