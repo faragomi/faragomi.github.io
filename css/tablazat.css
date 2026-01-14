@@ -31,18 +31,18 @@ table tr td:nth-child(9){
     text-align: center;
 }
 
-#tarsasLista table tr th:nth-child(2),
-#tarsasLista table tr th:nth-child(5),
-#tarsasLista table tr th:nth-child(11),
-#tarsasLista table tr th:nth-child(12),
-#tarsasLista table tr th:nth-child(13),
-#tarsasLista table tr th:nth-child(14),
-#tarsasLista table tr td:nth-child(2),
-#tarsasLista table tr td:nth-child(5),
-#tarsasLista table tr td:nth-child(11),
-#tarsasLista table tr td:nth-child(12),
-#tarsasLista table tr td:nth-child(13),
-#tarsasLista table tr td:nth-child(14){
+.tarsasLista table tr th:nth-child(2),
+.tarsasLista table tr th:nth-child(5),
+.tarsasLista table tr th:nth-child(11),
+.tarsasLista table tr th:nth-child(12),
+.tarsasLista table tr th:nth-child(13),
+.tarsasLista table tr th:nth-child(14),
+.tarsasLista table tr td:nth-child(2),
+.tarsasLista table tr td:nth-child(5),
+.tarsasLista table tr td:nth-child(11),
+.tarsasLista table tr td:nth-child(12),
+.tarsasLista table tr td:nth-child(13),
+.tarsasLista table tr td:nth-child(14){
     display: none;
 }
 
